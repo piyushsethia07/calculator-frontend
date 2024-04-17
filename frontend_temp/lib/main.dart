@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:frontend_temp/transaction/screen.dart';
+import 'package:frontend_temp/calculator/screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,18 +15,15 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp> {
   int selectedPageIndex = 0;
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Buttom Navigation Bar',
       home: Scaffold(
         body: [
-          Center(
-            child: Text(
-              'Calculator',
-            ),
-          ),
-          TransactionsPage(),
+          Welcome(),
+          TransactionListScreen(),
           Center(
             child: Text(
               'Inventory',
